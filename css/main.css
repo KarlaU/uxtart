@@ -113,10 +113,12 @@ input, input[type="text"], textarea{
     margin: 10px;
     background-color: transparent;
     border: 1px solid white;
+    border-radius: 0;
     padding: 11px;
     color: white;
     font-family: 'PT Mono';
     width: 90%;
+    -webkit-appearance: none;
 }
 p{
     font-family: 'PT Mono';

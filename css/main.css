@@ -228,7 +228,7 @@ input[type="submit"]:focus,
     position: fixed;
 }
 .nav>li>a{
-    opacity: .8;
+    opacity: .9;
 }
 .nav>li>a:hover, .nav>li>a:focus{
     background-color: transparent;

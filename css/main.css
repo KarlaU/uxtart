@@ -60,14 +60,47 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+*::-webkit-input-placeholder {
+    color: white;
+    font-family: 'PT Mono';
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: white;
+    font-family: 'PT Mono';
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: white;
+    font-family: 'PT Mono';
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
+    font-family: 'PT Mono';
+}
 a:hover{
     text-decoration: none;
 }
-h1{
+body{
+    background-color: #ff4d4d;
+}
+footer img{
+    margin: 0 10px;
+    opacity: .8;
+    width: 22px;
+}
+footer img:hover{
+    opacity: 1;
+}
+h1, h2{
     letter-spacing: 5.5px;
     margin-bottom: 17px;
 }
-h1, .call-to-action, .nav-container a{
+h2{
+    font-size: 35px;
+}
+h1, h2, .call-to-action, .nav-container a{
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
@@ -76,8 +109,38 @@ hr{
     margin: 0 auto 10px;
     width: 26px;
 }
+input, input[type="text"], textarea{
+    margin: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 11px;
+    color: white;
+    font-family: 'PT Mono';
+    width: 90%;
+}
 p{
     font-family: 'PT Mono';
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="submit"]:focus,
+.uneditable-input:focus {   
+  border: 1px solid rgba(255,255,255, 0.9);
+  box-shadow: 0 1px 1px rgba(255,255,255, 0.9) inset, 0 0 0px;
+  outline: 0 none;
 }
 #animated-image{
     height: 470px;
@@ -91,9 +154,21 @@ p{
 #animated-image img{
     width: 100%;
 }
+#contact-form{
+    margin: 0 auto 0;
+    max-width: 500px;
+    text-align: center;
+}
+#contact-form p{
+    font-size: 16px;
+}
 .brand{
     width: 100px;
     margin-top: 11px;
+}
+.brand-container{
+    height: 45px;
+    display: inline-block;
 }
 .centered-elements{
     position: relative;
@@ -101,9 +176,10 @@ p{
     z-index: 4;
     text-align: center;
 }
+
 .jumbotron{
     background-color: #ff4d4d;
-    background-image: url("../img/imagen-la-la-01.png");
+    /*background-image: url("../img/imagen-la-la-01.png");*/
     color: #ffeded;
     margin-bottom: 0;
     padding: 0;
@@ -115,6 +191,13 @@ p{
 .jumbotron h1, .jumbotron p{
     text-align: center;
 }
+.jumbotron footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -81px;
+    padding: 27px;
+}
 .jumbotron p{
     font-size: 18px;
 }
@@ -122,6 +205,7 @@ p{
     color: #ff4d4d;
     background-color: #ffeded;
     display: inline-block;
+    max-width: 380px;
     padding: 15px 20px;
 }
 .jumbotron .call-to-action:hover{

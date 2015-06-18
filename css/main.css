@@ -172,17 +172,20 @@ input[type="submit"]:focus,
     height: 45px;
     display: inline-block;
 }
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
 .centered-elements{
     position: relative;
     top: 15%;
     z-index: 4;
     text-align: center;
 }
-
-.jumbotron{
+.head-jumbotron{
     background-color: #ff4d4d;
-    /*background-image: url("../img/imagen-la-la-01.png");*/
     color: #ffeded;
+}
+.jumbotron{
     margin-bottom: 0;
     padding: 0;
     position: relative;
@@ -249,6 +252,9 @@ input[type="submit"]:focus,
 }
 .process-diagram:hover{
     opacity: 1;
+}
+.services-jumbotron{
+    background-color: white;
 }
 .title-container{
     margin: 0 auto 0;

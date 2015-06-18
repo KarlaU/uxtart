@@ -227,6 +227,9 @@ input[type="submit"]:focus,
 .fixed{
     position: fixed;
 }
+.nav>li>a:hover, .nav>li>a:focus{
+    background-color: transparent;
+}
 .nav-container{
     padding-top: 37px;
 }

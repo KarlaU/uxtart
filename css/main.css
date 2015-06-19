@@ -95,14 +95,13 @@ h1, h2{
     margin-bottom: 17px;
 }
 h2{
-    font-size: 35px;
+    font-size: 26px;
 }
 h1, h2, .call-to-action, .nav-container a{
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
 }
 hr{
-    border-top: 2px solid #ffffff;
     margin: 0 auto 10px;
     width: 26px;
 }
@@ -181,7 +180,10 @@ input[type="submit"]:focus,
 .head-jumbotron{
     background-color: #ff4d4d;
 }
-.head-jumbotron .title-container{
+.head-jumbotron hr{
+    border-top: 2px solid #ffffff;
+}
+.head-jumbotron .title-container, #contact-form{
     color: #ffeded;
 }
 .jumbotron{
@@ -255,6 +257,9 @@ input[type="submit"]:focus,
 }
 .services-jumbotron{
     background-color: white;
+}
+.services-jumbotron hr{
+    border-top: 2px solid #ff4d4d;
 }
 .title-container{
     margin: 0 auto 0;

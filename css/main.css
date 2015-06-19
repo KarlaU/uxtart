@@ -94,12 +94,16 @@ h1, h2{
     letter-spacing: 5.5px;
     margin-bottom: 17px;
 }
+h1, h2, .call-to-action, .nav-container a, h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
 h2{
     font-size: 26px;
 }
-h1, h2, .call-to-action, .nav-container a{
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
+h3{
+    color: #545454;
+    letter-spacing: 3px;
 }
 hr{
     margin: 0 auto 10px;
@@ -118,6 +122,7 @@ input, input[type="text"], textarea{
 }
 p{
     font-family: 'PT Mono';
+    color: #545454;
 }
 textarea:focus,
 input[type="text"]:focus,
@@ -157,9 +162,6 @@ input[type="submit"]:focus,
     max-width: 500px;
     text-align: center;
 }
-#contact-form p{
-    font-size: 16px;
-}
 .brand{
     width: 100px;
     margin-top: 11px;
@@ -179,11 +181,12 @@ input[type="submit"]:focus,
 }
 .head-jumbotron{
     background-color: #ff4d4d;
+    padding-bottom: 230px;
 }
 .head-jumbotron hr{
     border-top: 2px solid #ffffff;
 }
-.head-jumbotron .title-container, #contact-form{
+.head-jumbotron .title-container, .head-jumbotron .title-container p, #contact-form, #contact-form p{
     color: #ffeded;
 }
 .jumbotron{
@@ -206,7 +209,7 @@ input[type="submit"]:focus,
     padding: 27px;
 }
 .jumbotron p{
-    font-size: 18px;
+    font-size: 15px;
 }
 .jumbotron .call-to-action{
     color: #ff4d4d;
@@ -260,6 +263,19 @@ input[type="submit"]:focus,
 }
 .services-jumbotron hr{
     border-top: 2px solid #ff4d4d;
+}
+.stages{
+    background-color: #fafafa;
+}
+.stages-img{
+    width: 45%;
+}
+.stages-row{
+    margin:25px auto 0;
+    width: 75%;
+}
+.stages-row p{
+    font-size: 13px;
 }
 .title-container{
     margin: 0 auto 0;

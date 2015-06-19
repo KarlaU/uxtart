@@ -82,9 +82,6 @@ textarea {
 a:hover{
     text-decoration: none;
 }
-body{
-    background-color: #ff4d4d;
-}
 footer img{
     margin: 0 10px;
     opacity: .8;
@@ -183,9 +180,12 @@ input[type="submit"]:focus,
 }
 .head-jumbotron{
     background-color: #ff4d4d;
+}
+.head-jumbotron .title-container{
     color: #ffeded;
 }
 .jumbotron{
+    color: #262626;
     margin-bottom: 0;
     padding: 0;
     position: relative;
@@ -259,6 +259,7 @@ input[type="submit"]:focus,
 .title-container{
     margin: 0 auto 0;
     max-width: 651px;
+    text-align: center;
 }
 .title-container .lead{
     display: inline-block;

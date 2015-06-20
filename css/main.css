@@ -162,6 +162,9 @@ input[type="submit"]:focus,
     max-width: 500px;
     text-align: center;
 }
+#header{
+    padding-bottom: 260px;
+}
 .brand{
     width: 100px;
     margin-top: 11px;
@@ -174,14 +177,11 @@ input[type="submit"]:focus,
     background-image: none;
 }
 .centered-elements{
-    position: relative;
-    top: 15%;
-    z-index: 4;
+    padding-top: 8%;
     text-align: center;
 }
 .head-jumbotron{
     background-color: #ff4d4d;
-    padding-bottom: 230px;
 }
 .head-jumbotron hr{
     border-top: 2px solid #ffffff;
@@ -192,7 +192,7 @@ input[type="submit"]:focus,
 .jumbotron{
     color: #262626;
     margin-bottom: 0;
-    padding: 0;
+    padding: 0 0 130px;
     position: relative;
 }
 .jumbotron h1{

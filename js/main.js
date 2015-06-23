@@ -14,7 +14,7 @@ function esValido(nombre, email, msg){
     if(email.val() == ""){
         email.parent().children('span').text('Campo obligatorio');
         valido = false;   
-    }else if(esEmailValido(email.val())){
+    }else if(!esEmailValido(email.val())){
         email.parent().children('span').text('Formato no valido');
         valido = false;  
     }

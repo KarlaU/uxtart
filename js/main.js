@@ -14,7 +14,7 @@ function esValido(nombre, email, msg){
     if(email.val() == ""){
         email.parent().children('span').text('Campo obligatorio');
         valido = false;   
-    }else if(/^(([A-z]+\d*[\._]?)+)@\w+\.\w{2,4}$/.test((email.val())){
+    }else if(esEmailValido(email.val())){
         email.parent().children('span').text('Formato no valido');
         valido = false;  
     }

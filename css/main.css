@@ -302,6 +302,9 @@ input[type="submit"]:focus,
 .stages-row p{
     font-size: 15px;
 }
+.success{
+    color: white;
+}
 .title-container{
     margin: 0 auto 0;
     max-width: 651px;

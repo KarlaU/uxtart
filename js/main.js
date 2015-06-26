@@ -29,7 +29,7 @@ function esValido(nombre, email, msg){
 
 function enviarData(nombre, email, msg){
     var alertSuccess = $(".alert-success");
-    alertSuccess.text('Gracias por su consulta');
+    alertSuccess.text('Tu mensaje ha sido enviado, te responderemos lo antes posible');
 
     $.ajax({
         url: "//formspree.io/hellouxtart@gmail.com", 

@@ -38,10 +38,12 @@ function enviarData(nombre, email, msg){
         dataType: "json"
     })
     .success(function(){
-        alertSuccess.text('');
         nombre.val('');
         email.val('');
         msg.val('');
+        setTimeout(function(){
+            alertSuccess.text('');
+        }, 5000);
     });
 }
 

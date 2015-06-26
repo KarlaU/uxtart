@@ -7,20 +7,20 @@ function esValido(nombre, email, msg){
     $(".alert-warning").text('');
 
     if(nombre.val() == ""){
-        nombre.parent().children('span').text('Debes completar este campo para poder enviar el mensaje');
+        nombre.parent().children('strong').text('Debes completar este campo para poder enviar el mensaje');
         valido = false;
     }
 
     if(email.val() == ""){
-        email.parent().children('span').text('Debes completar este campo para poder enviar el mensaje');
+        email.parent().children('strong').text('Debes completar este campo para poder enviar el mensaje');
         valido = false;   
     }else if(!esEmailValido(email.val())){
-        email.parent().children('span').text('Este formato no es válido, prueba con un formato de email válido');
+        email.parent().children('strong').text('Formato no válido, prueba con un formato de email válido');
         valido = false;  
     }
 
     if(msg.val() == ""){
-        msg.parent().children('span').text('Debes completar este campo para poder enviar el mensaje');
+        msg.parent().children('strong').text('Debes completar este campo para poder enviar el mensaje');
         valido = false;
     }
 

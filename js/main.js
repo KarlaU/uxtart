@@ -28,7 +28,7 @@ function esValido(nombre, email, msg){
 }
 
 function enviarData(nombre, email, msg){
-    var alertSuccess = $(".alert-success");
+    var alertSuccess = $(".success");
     alertSuccess.text('Tu mensaje ha sido enviado, te responderemos lo antes posible');
 
     $.ajax({

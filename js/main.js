@@ -32,7 +32,7 @@ function enviarData(nombre, email, msg){
     alertSuccess.text('Tu mensaje ha sido enviado, te responderemos lo antes posible');
 
     $.ajax({
-        url: "//formspree.io/hellouxtart@gmail.com", 
+        url: "//formspree.io/n.glaves@gmail.com", 
         method: "POST",
         data: {message: nombre.val()+' '+email.val()+' '+msg.val()},
         dataType: "json"

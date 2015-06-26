@@ -169,6 +169,9 @@ input[type="submit"]:focus,
     width: 100px;
     margin-top: 11px;
 }
+.appear{
+    display: block;
+}
 .brand-container{
     height: 45px;
     display: inline-block;
@@ -277,6 +280,19 @@ input[type="submit"]:focus,
 }
 .stages-img{
     width: 45%;
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+.stages-img:hover{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
 }
 .stages-row{
     margin:25px auto 0;
@@ -295,10 +311,6 @@ input[type="submit"]:focus,
     padding: 0 42px;
     margin-bottom: 37px;
 }
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
  @media only screen and (max-width : 992px) {
         .col-md-4:nth-child(1) p, .col-md-4:nth-child(2) p{
             margin-bottom: 60px;

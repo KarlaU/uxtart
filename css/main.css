@@ -279,6 +279,7 @@ input[type="submit"]:focus,
     background-color: #fafafa;
 }
 .stages-img{
+    margin: 0 auto 0;
     width: 45%;
     -webkit-transition-duration: 0.8s;
     -moz-transition-duration: 0.8s;

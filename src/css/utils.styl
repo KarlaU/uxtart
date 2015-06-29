@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.clearfix
+    *zoom 1
+
+    &:after
+    &:before
+        content " "
+        display table
+
+    &:after
+        clear both
+
+.fixed
+    position fixed
+
+
+.hidden
+    display none !important
+    visibility hidden
+
+.invisible
+    visibility hidden
+
+.ir
+    background-color transparent
+    border 0
+    overflow hidden
+    *text-indent -9999px
+
+
+    &:before
+        content ""
+        display block
+        width 0
+        height 150%
+
+.visuallyhidden
+    border 0
+    clip rect(0 0 0 0)
+    height 1px
+    margin -1px
+    overflow hidden
+    padding 0
+    position absolute
+    width 1px
+
+    &.focusable:active
+    &.focusable:focus
+        clip auto
+        height auto
+        margin 0
+        overflow visible
+        position static
+        width auto

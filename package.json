@@ -2,9 +2,11 @@
   "name": "Uxart-portfolio",
   "version": "1.0.0",
   "dependencies": {
+    "body-parser": "^1.8.1",
     "express": "^4.13.0",
     "lowdb": "^0.10.0",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "nodemailer": "^0.6.1"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

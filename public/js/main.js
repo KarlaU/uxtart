@@ -31,13 +31,8 @@ function enviarData(nombre, email, msg){
     var alertSuccess = $(".success");
     alertSuccess.text('Tu mensaje ha sido enviado, te responderemos lo antes posible');
 
-    $.ajax({
-        url: "//formspree.io/karlavargasmunoz@gmail.com", 
-        method: "POST",
-        data: {message: nombre.val()+' '+email.val()+' '+msg.val()},
-        dataType: "json"
-    })
-    .success(function(){
+
+    $.post( "/send", {"nombre": nombre.val(), "email": email.val(), "msg":msg.val()}, function( data ) {
         nombre.val('');
         email.val('');
         msg.val('');
@@ -45,6 +40,7 @@ function enviarData(nombre, email, msg){
             alertSuccess.text('');
         }, 5000);
     });
+
 }
 
 function sendform(){

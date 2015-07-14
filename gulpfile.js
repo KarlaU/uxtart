@@ -1,29 +1,44 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var rename = require('gulp-rename');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 
-gulp.task('assets', function(){
-    gulp.src('./src/css/bootstrap.min.css')
-    .pipe(gulp.dest('./public/css'));
+var tasks = {
+    assets: function(){
+        gulp.src('./src/css/bootstrap.min.css')
+        .pipe(gulp.dest('./public/css'));
 
-    gulp.src('./src/fonts/*')
-    .pipe(gulp.dest('./public/fonts'));
-});
+        gulp.src('./src/fonts/*')
+        .pipe(gulp.dest('./public/fonts'));
+    },
 
-gulp.task('styl', function(){
-    gulp.src('./src/css/styles.styl')
-    .pipe(stylus({compress:true}))
-    .pipe(rename({extname:'.min.css'}))
-    .pipe(gulp.dest('./public/css'));
-});
+    styl: function(){
+        gulp.src('./src/css/styles.styl')
+        .pipe(stylus({compress:true}))
+        .pipe(rename({extname:'.min.css'}))
+        .pipe(gulp.dest('./public/css'));
+    },
 
-gulp.task('images', function(){
-    gulp.src('./src/img/*')
-    .pipe(gulp.dest('./public/img/'));
-});
+    images: function(){
+        var choices = {
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        };
 
-gulp.task('watch', function(){
+        gulp.src('./src/img/*')
+        .pipe(imagemin(choices))
+        .pipe(gulp.dest('./public/img/'));
+    }
+};
+
+gulp.task('assets', tasks.assets);
+gulp.task('styl', tasks.styl);
+gulp.task('images', tasks.images);
+
+gulp.task('watch', ['assets', 'styl', 'images'], function(){
     gulp.watch(['./src/css/**/*.styl'], ['styl']);
 });
 
-gulp.task('default', ['assets', 'styl', 'images', 'watch']);
+gulp.task('default', ['watch']);

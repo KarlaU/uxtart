@@ -72,16 +72,16 @@ $(window).scroll(function() {
 });
 
 $(document).ready(function(){
-    $('a[href^="#"]').on('click',function (e) {
+    $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
 
         var target = this.hash;
         var $target = $(target);
-
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
+        var animateOptions = {scrollTop: $target.offset().top};
+        var callback = function callback(){
             window.location.hash = target;
-        });
+        };
+
+        $('html, body').stop().animate(animateOptions, 900, 'swing', callback);
     });
 });

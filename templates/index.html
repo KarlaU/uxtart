@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 <section>
-    <div id="header" class="jumbotron head-jumbotron first-pic"> 
+    <div id="header" class="jumbotron head-jumbotron first-pic">
         <header class="container nav-container">
-            <a class="brand-container" href="#"><img class="brand" src="/public/img/logo-uxtart-13.png" alt="Logo Uxtart"></a>
+            <a id="potato" class="brand-container" href="#potato">
+                <img class="brand" src="/public/img/logo-uxtart-13.png"
+                    alt="Logo Uxtart"></a>
         </header>
         <div class="container centered-elements">
             <div class="title-container">
@@ -45,7 +47,7 @@
     </div>
 </section>
 <section>
-    <div class="jumbotron head-jumbotron second-pic"> 
+    <div class="jumbotron head-jumbotron second-pic">
         <div class="container centered-elements">
             <div id="contact-form">
                 <h2>Hablemos</h2>
@@ -64,13 +66,13 @@
                     <strong></strong>
                 </div>
                 <input onclick="sendform();" class="call-to-action" id="submit_button" type="button" value="Enviar" />
-            </div> 
+            </div>
             <strong class="success"></strong>
         </div>
         <footer>
             <a href="https://twitter.com/uxtart"><img src="/public/img/twitter.png" alt="twitter"></a>
             <a href="hhttps://www.facebook.com/uxtart"><img src="/public/img/facebook-01.png" alt="facebook"></a>
-        </footer>    
+        </footer>
     <div>
 </section>
 {% endblock %}

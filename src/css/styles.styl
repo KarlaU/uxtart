@@ -99,7 +99,7 @@ h2
 
 h3
     color #545454
-    font-size 18px
+    font-size 13px
     letter-spacing 3px
 
 hr
@@ -163,12 +163,12 @@ input[type="submit"]:focus,
 #header
  padding-bottom 170px
 
+ .appear
+    display block
+
 .brand
     width 100px
     margin-top 11px
-
-.appear
-    display block
 
 .brand-container
     height 45px
@@ -180,6 +180,13 @@ input[type="submit"]:focus,
 .centered-elements
     padding-top 8%
     text-align center
+
+.col-md-4
+
+    p
+
+        max-width 494px
+        margin 0 auto 0
 
 .first-pic
     background-image url("../img/picbyn3.png")
@@ -194,6 +201,9 @@ input[type="submit"]:focus,
 
     hr
         border-top 2px solid #ffffff
+
+    .lead
+        margin-bottom 30px !important
 
     .title-container,
     .title-container p,
@@ -251,11 +261,45 @@ input[type="submit"]:focus,
         color white
         letter-spacing 3px
 
+.service-caption 
+    padding 50px
+
+.services
+
+    :nth-child(1)
+
+        .services-thumbnail
+
+            .service-caption
+                padding 125px 50px
+
+    :nth-child(2)
+
+        .services-thumbnail
+
+            .service-caption
+                padding 91px 50px
+
+    .col-md-4
+        padding 0
+
 .services-jumbotron
     background-color white
 
     hr
         border-top 2px solid #ff4d4d
+
+    .title-container
+        margin-bottom 37px
+
+.services-thumbnail
+    height 100%
+    background-color #fafafa
+    margin-bottom -1000px
+    padding-bottom 1000px
+
+    img
+        width 100%
 
 .stages
     background-color #fafafa
@@ -278,11 +322,12 @@ input[type="submit"]:focus,
     -o-transform rotate(360deg)
 
 .stages-row
+    overflow hidden
     margin 25px auto 0
     width 75%
 
     p
-        font-size 15px
+        font-size 13px
 
 .success
     color white
@@ -294,8 +339,8 @@ input[type="submit"]:focus,
 
     .lead
         display inline-block
+        margin-bottom 0
         padding 0 42px
-        margin-bottom 37px
 
 /* ==========================================================================
    Helper classes

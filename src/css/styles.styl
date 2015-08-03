@@ -192,7 +192,7 @@ input[type="submit"]:focus,
     background-image none
 
 .centered-elements
-    padding-top 8%
+    padding-top 6%
     text-align center
 
 .col-md-4
@@ -206,19 +206,44 @@ input[type="submit"]:focus,
     background-image url("../img/picbyn3.png")
     background-size cover
 
+.hover-image
+    background-color white
+    height 100%
+    opacity 0
+    transition: opacity .25s;
+    -webkit-transition: opacity .25s; /* Safari */
+
+.hover-image:hover
+        opacity 1
+
 .image-1
     background-image url("../img/service-image-01.jpg")
     background-position center
     background-size cover
+
+    .hover-image
+        background-image url("../img/service-hover-1.png")
+        background-position center
+        background-size cover
 
 .image-2
     background-image url("../img/service-image-02.jpg")
     background-position center
     background-size cover
 
+    .hover-image
+        background-image url("../img/service-hover-2.png")
+        background-position center
+        background-size cover
+
 .image-3
     background-image url("../img/service-image-03.jpg")
     background-position center
+
+    .hover-image
+        background-image url("../img/service-hover-3.png")
+        background-position center
+        background-size cover
     background-size cover
 
 .second-pic
@@ -243,7 +268,7 @@ input[type="submit"]:focus,
 .jumbotron
     color #262626
     margin-bottom 0
-    padding 0 0 130px
+    padding 0 0 97px
     position relative
 
     h1
@@ -313,9 +338,10 @@ input[type="submit"]:focus,
     margin-bottom -1000px
     padding-bottom 1000px
 
-    figure
+    figure,
         background-color silver
         height: 250px
+        overflow hidden
         position relative
         width:100%
 

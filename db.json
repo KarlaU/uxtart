@@ -1,0 +1,45 @@
+{
+  "servicios": [
+    {
+      "titulo": "Asesoría en UX",
+      "texto": "Investigamos y aplicamos evaluaciones para diagnosticar y mejorar la experiencia de usuario en tus productos digitales.",
+      "imagenClass": "image-1"
+    },
+    {
+      "titulo": "Sitios Web",
+      "texto": "Ya sea un sitio web de contenidos o una web app de mayor complejidad, creamos soluciones innovadoras, eficientes y con una gran experiencia de usuario.",
+      "imagenClass": "image-2"
+    },
+    {
+      "titulo": "APLICACIONES MÓVILES",
+      "texto": "Llevamos tu proyecto a las plataformas móviles más populares del mercado: IOS y Android.",
+      "imagenClass": "image-3"
+    }
+  ],
+  "etapas": [
+    {
+      "nombre": "Idear",
+      "descripcion": "Todo buen proyecto digital comienza con una idea viable, rentable e innovadora. Nuestra misión es ayudarte a pulirla y -sobre esa base- planificar el desarrollo de tu producto.",
+      "imagen": {
+        "src": "/public/img/proceso-01.png",
+        "alt": "Imagen idear"
+      }
+    },
+    {
+      "nombre": "Construir",
+      "descripcion": "Co-diseñamos contigo tu proyecto digital con las mejores prácticas, centrándonos tanto en las necesidades de tus usuarios como en los objetivos del negocio.",
+      "imagen": {
+        "src": "/public/img/proceso-02.png",
+        "alt": "Imagen construir"
+      }
+    },
+    {
+      "nombre": "Evaluar",
+      "descripcion": "Lo que no se mide no se puede mejorar por eso aplicamos estudios para medir la respuesta de tus usuarios y el éxito de tu producto.",
+      "imagen": {
+        "src": "/public/img/proceso-03.png",
+        "alt": "Imagen evaluar"
+      }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 //var imagemin = require('gulp-imagemin');
 //var pngquant = require('imagemin-pngquant');
 

@@ -168,8 +168,17 @@ input[type="submit"]:focus,
     .stages-row
         width 100%
 
- .appear
-    display block
+.arrow-container{
+    background-image url("../img/arrow.png")
+    background-repeat no-repeat
+    background-size contain
+    bottom 0
+    height 17px
+    margin-right -21.5px
+    position absolute
+    right 50%
+    width 43px
+}
 
 .brand
     width 100px
@@ -195,6 +204,21 @@ input[type="submit"]:focus,
 
 .first-pic
     background-image url("../img/picbyn3.png")
+    background-size cover
+
+.image-1
+    background-image url("../img/service-image-01.jpg")
+    background-position center
+    background-size cover
+
+.image-2
+    background-image url("../img/service-image-02.jpg")
+    background-position center
+    background-size cover
+
+.image-3
+    background-image url("../img/service-image-03.jpg")
+    background-position center
     background-size cover
 
 .second-pic
@@ -271,22 +295,8 @@ input[type="submit"]:focus,
 
 .services
 
-    :nth-child(1)
-
-        .services-thumbnail
-
-            .service-caption
-                padding 125px 50px
-
-    :nth-child(2)
-
-        .services-thumbnail
-
-            .service-caption
-                padding 91px 50px
-
-    .col-md-4
-        padding 0
+    .service-caption
+            padding 69px 50px
 
 .services-jumbotron
     background-color white
@@ -303,8 +313,11 @@ input[type="submit"]:focus,
     margin-bottom -1000px
     padding-bottom 1000px
 
-    img
-        width 100%
+    figure
+        background-color silver
+        height: 250px
+        position relative
+        width:100%
 
 .stages
     background-color #fafafa

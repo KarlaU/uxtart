@@ -4,23 +4,28 @@ function esEmailValido(text){
 
 function esValido(nombre, email, msg){
     var valido = true;
-    $(".alert-warning").text('');
+    var mensajes = {
+        obligatorio: 'Debes completar este campo para poder enviar el mensaje',
+        formatoInvalido: 'Formato no válido, prueba con un formato de email válido'
+    }
 
-    if(nombre.val() === ""){
-        nombre.parent().children('strong').text('Debes completar este campo para poder enviar el mensaje');
+    $('.alert-warning').text('');
+
+    if(nombre.val() === ''){
+        nombre.parent().children('strong').text(mensajes.obligatorio);
         valido = false;
     }
 
-    if(email.val() === ""){
-        email.parent().children('strong').text('Debes completar este campo para poder enviar el mensaje');
+    if(email.val() === ''){
+        email.parent().children('strong').text(mensajes.obligatorio);
         valido = false;
     }else if(!esEmailValido(email.val())){
-        email.parent().children('strong').text('Formato no válido, prueba con un formato de email válido');
+        email.parent().children('strong').text(mensaje.formatoInvalido);
         valido = false;
     }
 
-    if(msg.val() === ""){
-        msg.parent().children('strong').text('Debes completar este campo para poder enviar el mensaje');
+    if(msg.val() === ''){
+        msg.parent().children('strong').text(mensajes.obligatorio);
         valido = false;
     }
 
@@ -28,14 +33,14 @@ function esValido(nombre, email, msg){
 }
 
 function enviarData(nombre, email, msg){
-    var alertSuccess = $(".success");
+    var alertSuccess = $('.success');
     alertSuccess.text('Tu mensaje ha sido enviado, te responderemos lo antes posible');
 
     $.ajax({
-        url: "//formspree.io/karlavargasmunoz@gmail.com",
-        method: "POST",
-        data: {message: nombre.val()+' '+email.val()+' '+msg.val()},
-        dataType: "json"
+        url: '//formspree.io/karlavargasmunoz@gmail.com',
+        method: 'POST',
+        data: { message: [ nombre.val(), email.val(), msg.val() ].join(' ') },
+        dataType: 'json'
     })
     .success(function(){
         nombre.val('');
@@ -48,9 +53,9 @@ function enviarData(nombre, email, msg){
 }
 
 function sendform(){
-    var nombre = $("#name");
-    var email = $("#email");
-    var msg = $("#message");
+    var nombre = $('#name');
+    var email = $('#email');
+    var msg = $('#message');
 
     if(!esValido(nombre, email, msg)){
         return;
@@ -58,30 +63,27 @@ function sendform(){
 
     enviarData(nombre, email, msg);
 }
-/*animated shit*/
 
 $(window).scroll(function() {
     $('.stages-img').each(function(){
     var imagePos = $(this).offset().top;
 
     var topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+400) {
-            $(this).addClass("appear");
+        if (imagePos < topOfWindow + 400) {
+            $(this).addClass('appear');
         }
     });
 });
 
-$(document).ready(function(){
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
+$('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
 
-        var target = this.hash;
-        var $target = $(target);
-        var animateOptions = {scrollTop: $target.offset().top};
-        var callback = function callback(){
-            window.location.hash = target;
-        };
+    var target = this.hash;
+    var $target = $(target);
+    var animateOptions = { scrollTop: $target.offset().top };
+    var callback = function callback(){
+        window.location.hash = target;
+    };
 
-        $('html, body').stop().animate(animateOptions, 900, 'swing', callback);
-    });
+    $('html, body').stop().animate(animateOptions, 900, 'swing', callback);
 });

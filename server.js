@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var swig = require('swig');
 var db = require('lowdb')('./db.json');
 var app = express();
-var emailer = require('./emailer.js');
+var emailer = require(__dirname + '/emailer.js');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 

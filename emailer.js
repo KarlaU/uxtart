@@ -3,32 +3,42 @@ var mailer = require('nodemailer');
 //MAILER CONFIG.
 // Use Smtp Protocol to send Email
 var smtpTransport = mailer.createTransport('SMTP',{
-    service: 'Gmail',
-    auth: {
-        user: 'uxtartbot@gmail.com',
-        pass: 'alphayomega'
-    }
+  service: 'Gmail',
+  auth: {
+      user: 'uxtartbot@gmail.com',
+      pass: 'alphayomega'
+  }
 });
 
-var Mail = {
+function mailFactory(){
+  return {
     from: 'uxtartbot <uxtartbot@gmail.com>',
     to: 'hellouxtart@gmail.com',
     subject: '',
     text: '',
     html: ''
-};
+  };
+}
 
 module.exports = function(name, address, msg, callback){
-    var mail = Object.create(Mail);
-    var template = '<p>nombre : #{name}</p><p>email : #{email}</p><p>Mensaje : #{message}</p>';
-    template = template
-        .replace('#{name}', name)
-        .replace('#{email}', address)
-        .replace('#{message}', msg);
+  var mail = mailFactory();
 
-    mail.subject = '[Page] ' + name;
-    mail.text = '[Page] ' + name;
-    mail.html = template;
+  var template = '<p>nombre : #{name}</p><p>email : #{email}</p><p>Mensaje : #{message}</p>';
+  template = template
+    .replace('#{name}', name)
+    .replace('#{email}', address)
+    .replace('#{message}', msg);
 
-    smtpTransport.sendMail(mail, callback);
+  mail.subject = '[Page] ' + name;
+  mail.text = '[Page] ' + name;
+  mail.html = template;
+
+  smtpTransport.sendMail(mail, function(error, response){
+    if(error){
+      console.log(error);
+      return;
+    }
+
+    callback(response);
+  });
 };
